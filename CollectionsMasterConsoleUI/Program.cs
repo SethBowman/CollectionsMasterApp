@@ -184,13 +184,12 @@ namespace CollectionsMasterConsoleUI
         private static void ReverseArray(int[] array)
         {            
             int[] reversed = new int[array.Length];
-            for (int i = array.Length - 1; i >= 0; i--)
+            for (int i = array.Length - 1, x = 0; i >= 0; i--, x++)
             {
-                for (int j = 0; j < array.Length; j++)
-                {
-                    reversed[j] = array[i];
-                }
+               reversed[x] = array[i];
             }
+
+            NumberPrinter(reversed);
         }
 
         /// <summary>
